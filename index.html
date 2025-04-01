@@ -2,42 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple Calculator</title>
-  <link rel="stylesheet" href="../../style.css">
+  <title>Muhammad Talha | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Simple Calculator</h1>
+    <h1>Muhammad Talha</h1>
+    <p>Software Developer | Portfolio</p>
   </header>
 
-  <section>
-    <input type="number" id="num1" placeholder="Enter number 1">
-    <input type="number" id="num2" placeholder="Enter number 2">
-    <br><br>
-    <button onclick="calculate('+')">+</button>
-    <button onclick="calculate('-')">-</button>
-    <button onclick="calculate('*')">*</button>
-    <button onclick="calculate('/')">/</button>
-    <p id="result">Result: </p>
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3><a href="python/index.html">Python Projects</a></h3>
+      <p>See some cool Python-based interactive demos (outputs only).</p>
+    </div>
+
+    <div class="project">
+      <h3><a href="java/index.html">Java Projects</a></h3>
+      <p>Coming soon!</p>
+    </div>
   </section>
 
   <footer>
-    <p><a href="../index.html">Back to Python Projects</a></p>
+    <p>Contact: talha@example.com | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
   </footer>
-
-  <script>
-    function calculate(op) {
-      let a = parseFloat(document.getElementById('num1').value);
-      let b = parseFloat(document.getElementById('num2').value);
-      let res = 0;
-      switch(op) {
-        case '+': res = a + b; break;
-        case '-': res = a - b; break;
-        case '*': res = a * b; break;
-        case '/': res = b !== 0 ? a / b : 'Error (divide by 0)'; break;
-      }
-      document.getElementById('result').innerText = 'Result: ' + res;
-    }
-  </script>
 </body>
 </html>
